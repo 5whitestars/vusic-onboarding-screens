@@ -1,0 +1,3 @@
+[submodule "vusic-onboarding-screens"]
+	path = vusic-onboarding-screens
+	url = https://github.com/5whitestars/vusic-onboarding-screens.git
