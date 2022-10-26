@@ -4,7 +4,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import HomeScreen from './Components/Screens/HomeScreen';
-import ProfileScreen from './Components/Screens/ProfileScreen';
+import ProfileScreen from './Components/Screens/OnboardingPage';
+import OnboardingPage from './Components/Screens/OnboardingPage';
 
 const Stack = createNativeStackNavigator();
 
@@ -17,7 +18,7 @@ const App = () => {
           component={HomeScreen}
           options={{ title: 'Welcome' }}
         />
-        <Stack.Screen name="Profile" component={ProfileScreen} />
+        <Stack.Screen name="Onboarding" component={OnboardingPage} />
       </Stack.Navigator>
     </NavigationContainer>
   );

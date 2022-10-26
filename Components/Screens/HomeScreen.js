@@ -1,20 +1,27 @@
 import * as React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
+import Button from '../Button';
 
 
 const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
+        <Text>Home Screen :P</Text>
         <StatusBar style="auto" />
+        <Button
+          title="Go to Onboarding Page!"
+          onPress={() =>
+            navigation.navigate('Onboarding', { name: 'Jane' })
+          }
+        />
+        <Button 
+          title="Go to Login Page!"
+          // onPress={() =>
+          //   navigation.navigate('Login', { name: 'Jane' })
+          // }
+        />
     </View>
-    // <Button
-    //   title="Go to Jane's profile"
-    //   onPress={() =>
-    //     navigation.navigate('Profile', { name: 'Jane' })
-    //   }
-    // />
   );
 };
 
@@ -25,6 +32,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  button : {
+
+  }
 });
 
 export default HomeScreen;
