@@ -6,8 +6,8 @@ const Button = props => {
   return(
     <Pressable 
       style={styles.button} 
-      onPress={onPress}>
-        <Text style={styles.text}>{title}</Text>
+      onPress={props.onPress}>
+        <Text style={styles.text}>{props.title}</Text>
     </Pressable>
   );
 };
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
   },
   text : {
     textAlign: 'center',
-    fontFamily: 'Inter',
+    fontFamily: 'Arial',  // change to the font "Inter" later
   }
 })
 

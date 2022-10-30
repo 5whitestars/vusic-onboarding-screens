@@ -7,20 +7,20 @@ import Button from '../Button';
 const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
-        <Text>Home Screen :P</Text>
+        {/* <Text>Home Screen :P</Text> */}
         <StatusBar style="auto" />
         <Button
           title="Go to Onboarding Page!"
           onPress={() =>
-            navigation.navigate('Onboarding', { name: 'Jane' })
+            navigation.navigate('Onboarding')
           }
         />
-        <Button 
+        {/* <Button 
           title="Go to Login Page!"
           // onPress={() =>
           //   navigation.navigate('Login', { name: 'Jane' })
           // }
-        />
+        /> */}
     </View>
   );
 };
