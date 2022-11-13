@@ -1,30 +1,50 @@
 import * as React from 'react';
-import { StatusBar, Text, View } from 'expo-status-bar';
-import { StyleSheet } from 'react-native';
+import { StatusBar} from 'expo-status-bar';
+import { StyleSheet, Text, View, Image, ImageBackground  } from 'react-native';
+import Button from '../Button';
+import styleSheet from '../../styles/OnboardingStyles'
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-
-const OnboardingPage = () => {
+const OnboardingPage = ({navigation}) => {
   return (
-    <View style={styles.container}>
-      <StatusBar style="auto" />
-      <Text>This is the onboarding page!</Text>
-      {/* <Text>This is {route.params.name}'s profile</Text> */}
-    </View>
+    <SafeAreaView style={styleSheet.background}>
+      <View style={styleSheet.container}>
+        <StatusBar style="auto" />
+        <ImageBackground 
+          style={styleSheet.bgImage}
+          source={require('../../assets/background-onboarding.png')}
+        />
+        <Image 
+          source={require('../../assets/logo.png')}
+          style={styleSheet.OPlogo}
+        />
+        <Text style={styleSheet.loginText}>Connect with VUSIC to share your music with friends </Text>
+        <Button 
+          style={styleSheet.spotifyButton}
+          title="Continue with Spotify"
+          onPress={() => navigation.navigate('Spotify')}
+        />
+        <Button 
+          style={styleSheet.appleButton}
+          title="Continue with Apple"
+          onPress={() => navigation.navigate('Apple')}
+        />
+        <Button 
+          style={styleSheet.amazonButton}
+          title="Continue with Amazon Music"
+          onPress={() => navigation.navigate('Amazon')}
+        />
+        <Button 
+          style={styleSheet.soundcloudButton}
+          title="Continue with Soundcloud"
+          onPress={() => navigation.navigate('Soundcloud')}
+        />
+      </View>
+    </SafeAreaView>
+
 
   
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  button : {
-
-  }
-});
 
 export default OnboardingPage;
