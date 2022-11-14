@@ -8,10 +8,10 @@ import styleSheet from '../../styles/OnboardingStyles';
 const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <ImageBackground 
+      {/* <ImageBackground 
         style={styleSheet.bgImage}
         source={require('../../assets/background-onboarding.png')}
-      >
+      > */}
       <StatusBar style="auto" />
       <Image 
         source={require('../../assets/logo.png')}
@@ -31,7 +31,7 @@ const HomeScreen = ({ navigation }) => {
           navigation.navigate()
         }
       />
-      </ImageBackground>
+      {/* </ImageBackground> */}
     </View>
   );
 };

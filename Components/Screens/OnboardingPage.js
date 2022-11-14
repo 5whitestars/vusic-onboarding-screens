@@ -10,10 +10,10 @@ const OnboardingPage = ({navigation}) => {
     <SafeAreaView style={styleSheet.background}>
       <View style={styleSheet.container}>
         <StatusBar style="auto" />
-        <ImageBackground 
+        {/* <ImageBackground 
           style={styleSheet.bgImage}
           source={require('../../assets/background-onboarding.png')}
-        />
+        /> */}
         <Image 
           source={require('../../assets/logo.png')}
           style={styleSheet.OPlogo}
