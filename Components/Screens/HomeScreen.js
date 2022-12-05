@@ -7,32 +7,35 @@ import styleSheet from '../../styles/OnboardingStyles';
 
 const HomeScreen = ({ navigation }) => {
   return (
-    <View style={styles.container}>
-      {/* <ImageBackground 
-        style={styleSheet.bgImage}
-        source={require('../../assets/background-onboarding.png')}
-      > */}
-      <StatusBar style="auto" />
-      <Image 
-        source={require('../../assets/logo.png')}
-        style={styleSheet.HSlogo}
-      />
-      <Button
-        style={styles.button}
-        title="LOG IN"
-        onPress={() =>
-          navigation.navigate('Onboarding')
-        }
-      />
-      <Button
-        style={styles.button}
-        title="SIGN UP"
-        onPress={() =>
-          navigation.navigate()
-        }
-      />
-      {/* </ImageBackground> */}
-    </View>
+    <SafeAreaView style={styleSheet.background}>
+      <View style={styles.container}>
+        <StatusBar style="auto" />
+        { <ImageBackground 
+          style={styleSheet.bgImage}
+          source={require('../../assets/background-onboarding.png')}
+        /> }
+        <StatusBar style="auto" />
+        <Image 
+          source={require('../../assets/logo.png')}
+          style={styleSheet.HSlogo}
+        />
+        <Button
+          style={styles.button}
+          title="LOG IN"
+          onPress={() =>
+            navigation.navigate('Onboarding')
+          }
+        />
+        <Button
+          style={styles.button}
+          title="SIGN UP"
+          onPress={() =>
+            navigation.navigate()
+          }
+        />
+        { /*</ImageBackground> */}
+      </View>
+    </SafeAreaView>
   );
 };
 
